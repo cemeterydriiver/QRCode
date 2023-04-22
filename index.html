@@ -23,13 +23,7 @@
         Limpar
       </button>
       <button onclick="downloadQRCode(generateQRCode())">Download</button>
-
   </form>
-  
-
-
-  
-  
   <div id="qrcode-container">
     <div id="qrcode" class="qrcode"></div>
     <h4>Estilizado:</h4>
@@ -39,6 +33,18 @@
   <script type="text/javascript" src="gerador.js">
   </script>
 </div>
+<div id="scanner-container">
+    <h1>Scanear QR Code</h1>
+    <video id="scanner-video"></video>
+    <canvas id="scanner-canvas"></canvas>
+    <button id="scanner-button">Scan</button>
+    <button id="stop-scan-button">Parar</button>
+    <button id="switch-camera-button">Trocar Câmera</button>
+</div>
+
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="scaner.js"></script>
 
 </body>
 
