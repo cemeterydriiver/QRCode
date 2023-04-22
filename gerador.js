@@ -34,3 +34,14 @@ function clearQRCode() {
           alert("Por favor, insira uma URL válida");
         }
       }
+      function downloadQRCode() {
+        let qrcodeContainer = document.getElementById("qrcode");
+        let imgData = qrcodeContainer.querySelector("img").src;
+        let downloadLink = document.createElement("a");
+        downloadLink.href = imgData;
+        downloadLink.download = "qrcode.png";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+      
