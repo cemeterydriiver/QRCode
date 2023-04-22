@@ -1,5 +1,6 @@
 # QR Code📱
 _Este repositório contém uma aplicação simples para geração de QR Codes utilizando a linguagem de programação JavaScript e a biblioteca qrcode-generator._
+__[CLIQUE AQUI](https://cemeterydriiver.github.io/QRCode/)__ para acessar a aplicação no seu navegador.
 
 ## ⚙️Funcionalidades:
 __O aplicativo possui duas funcionalidades principais:__
@@ -9,7 +10,7 @@ __O aplicativo possui duas funcionalidades principais:__
 ## 🛠️Como executar o aplicativo:
 __Para executar a aplicação, você precisa ter um navegador web instalado em seu computador. Em seguida, siga as etapas abaixo:__
 
-- CLIQUE AQUI
+- __[CLIQUE AQUI](https://cemeterydriiver.github.io/QRCode/)__ para acessar a aplicação no seu navegador.
 
 1- Clone este repositório para o seu computador.
 
