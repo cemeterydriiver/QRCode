@@ -5,41 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>QRCode</title>
 </head>
 
 <body>
-    <input id="text" type="text" value="https://github.com/cemeterydriiver" style="width:80%" /><br />
-    <div id="qrcode"></div>
-    <script src="qrcode.js"></script>
-    <script src="qrcode.min.js"></script>
-    <script type="text/javascript">
-        var qrcode = new QRCode("qrcode");
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
-        function makeCode() {
-            var elText = document.getElementById("text");
+<div class="form">
+  <h1>Gerador de QR code</h1>
+  <form>
+    <input type="url" id="website" name="website" placeholder="https://github.com/cemeterydriiver" required />
+    <button type="button" onclick="generateQRCode()">
+      Gerar 
+    </button>
+  </form>
+  <button type="button" onclick="clearQRCode()">
+    Limpar
+  </button>
 
-            if (!elText.value) {
-                alert("Input a text");
-                elText.focus();
-                return;
-            }
+  
+  
+  <div id="qrcode-container">
+    <div id="qrcode" class="qrcode"></div>
+    <h4>Estilizado:</h4>
+    <div id="qrcode-2" class="qrcode"></div>
+  </div>
 
-            qrcode.makeCode(elText.value);
-        }
+  <script type="text/javascript" src="gerador.js">
+  </script>
+</div>
 
-        makeCode();
-
-        $("#text").
-            on("blur", function () {
-                makeCode();
-            }).
-            on("keydown", function (e) {
-                if (e.keyCode == 13) {
-                    makeCode();
-                }
-            });
-    </script>
 </body>
 
 </html>
