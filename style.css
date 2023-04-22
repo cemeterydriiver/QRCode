@@ -1,3 +1,4 @@
+/* Estilos padrão para telas maiores */
 .form {
     font-family: Helvetica, sans-serif;
     max-width: 400px;
@@ -12,7 +13,7 @@
     text-align: center;
     color: #fff;
     margin: -16px -16px 16px -16px;
-    font-size:  25px;
+    font-size: 25px;
   }
   .form input[type="text"],
   .form input[type="url"] {
@@ -30,7 +31,6 @@
     padding: 3%;
     border: 1px solid #5868bf;
   }
-  
   .form button {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -47,15 +47,40 @@
     cursor: pointer;
   }
   .form button:hover {
-    background: rgba(88,104,191, 0.5);
+    background: rgba(88, 104, 191, 0.5);
   }
-  #qrcode-container{
-      display:none;
+  #qrcode-container {
+    display: none;
   }
-  
-  .qrcode{
+  .qrcode {
     padding: 16px;
   }
-  .qrcode img{
+  .qrcode img {
     margin: 0 auto;
   }
+  
+  /* Estilos para telas menores */
+  @media (max-width: 768px) {
+    .form {
+      max-width: 90%;
+    }
+    .form h1 {
+      font-size: 20px;
+    }
+    .form input[type="text"],
+    .form input[type="url"] {
+      font-size: 16px;
+    }
+    .form button {
+      font-size: 16px;
+      padding: 2%;
+    }
+    .qrcode {
+      padding: 10px;
+    }
+    .qrcode img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
